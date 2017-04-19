@@ -1,0 +1,51 @@
+{
+  "name": "mff-tabs",
+  "version": "1.0.0",
+  "description": "tabs ui component for react",
+  "keywords": [
+    "react",
+    "tabs",
+    "react-component",
+    "react-tabs"
+  ],
+  "files": [
+    "lib",
+    "assets/*.css"
+  ],
+  "main": "./lib/index",
+  "homepage": "https://github.com/Mi-FanFan/mff-tabs",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Mi-FanFan/mff-tabs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mi-FanFan/mff-tabs/issues"
+  },
+  "licenses": "MIT",
+  "scripts": {
+    "clean": "rimraf ./lib",
+    "build": "npm run clean &  babel ./src --out-dir ./lib --copy-files",
+    "pre-publish": "npm run build"
+  },
+  "devDependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-latest": "*",
+    "babel-preset-react": "*",
+    "babel-preset-stage-2": "*",
+    "pre-commit": "1.x",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "3.x",
+    "react-test-renderer": "^15.5.4",
+    "rimraf": "^2.6.1"
+  },
+  "dependencies": {
+    "babel-runtime": "6.x",
+    "classnames": "2.x",
+    "create-react-class": "15.x",
+    "prop-types": "15.x",
+    "react-hammerjs": "~0.5.0"
+  }
+}
