@@ -1,6 +1,6 @@
 {
   "name": "mff-tabs",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "tabs ui component for react",
   "keywords": [
     "react",
@@ -25,7 +25,7 @@
   "scripts": {
     "clean": "rimraf ./lib",
     "build": "npm run clean &  babel ./src --out-dir ./lib --copy-files",
-    "pre-publish": "npm run build"
+    "prepublish": "npm run build"
   },
   "devDependencies": {
     "babel-cli": "*",
