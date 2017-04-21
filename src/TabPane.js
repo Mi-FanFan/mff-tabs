@@ -23,7 +23,7 @@ class TabPane extends Component {
           role="tabpanel"
           aria-hidden={props.active ? 'false' : 'true'}
           className={cls}
-          dangerouslySetInnerHTML={{__html: isRender || forceRender ? children : placeholder}}
+          dangerouslySetInnerHTML={{__html: isRender || forceRender ? innerHtml : placeholder}}
         />
       )
     }
@@ -46,11 +46,11 @@ TabPane.propTypes = {
   destroyInactiveTabPane: PropTypes.bool,
   forceRender: PropTypes.bool,
   placeholder: PropTypes.node,
-  innerHtml: PropTypes.bool,
+  innerHtml: PropTypes.string,
 }
 
 TabPane.defaultProps = {
   placeholder: null,
-  innerHtml:false
+  innerHtml:null
 }
 export default TabPane
