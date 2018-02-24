@@ -158,8 +158,8 @@ class SwipeableTabContent extends Component {
     }
     return (
       <Hammer
-        {...events}
-        {...direction}
+        // {...events} 
+        // {...direction}
         options={hammerOptions}
       >
         <div>
@@ -171,12 +171,12 @@ class SwipeableTabContent extends Component {
 }
 
 SwipeableTabContent.propTypes = {
-  tabBarPosition: PropTypes.string,
-  onChange: PropTypes.func,
   children: PropTypes.any,
-  hammerOptions: PropTypes.any,
+  onChange: PropTypes.func,
   animated: PropTypes.bool,
   activeKey: PropTypes.string,
+  hammerOptions: PropTypes.any,
+  tabBarPosition: PropTypes.string,
 }
 
 SwipeableTabContent.defaultProps = {

@@ -49,16 +49,15 @@ renderTabContent = () => {
 render () {
   return (
     <MffTabs
-  renderTabBar={this.renderTabBar}
-  renderTabContent={this.renderTabContent}
-  {...this.props}
-  />
+      renderTabBar={this.renderTabBar}
+      renderTabContent={this.renderTabContent}
+      {...this.props}
+    />
 )
 }
 
 }
 Tabs.propTypes = {
-
   activeKey: PropTypes.string,
   defaultActiveKey: PropTypes.string,
   onChange: PropTypes.func,
@@ -86,7 +85,12 @@ Tabs.defaultProps = {
   animated: true,
   swipeable: true,
   tabBarPosition: 'top',
-  hammerOptions: {},
+  hammerOptions: {
+    recognizers: {
+      swipe: { disable : true }
+    },
+    touchAction:'none'
+  },
   tabBarhammerOptions: {},
   pageSize: 4,
   speed: 8,
@@ -106,12 +110,83 @@ class Examples extends React.Component {
 
   render() {
     return (
-
       <Tabs  onChange={callback} onTabClick={handleTabClick}>
       <TabPane tab="选项卡一" key="4">
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '5rem', backgroundColor: '#fff' }}>
-    选项卡一内容
-    </div>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#fff' }}>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+          选项卡一内容<br/>
+       </div>
     </TabPane>
     <TabPane tab="选项卡二" key="3">
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '5rem', backgroundColor: '#fff' }}>

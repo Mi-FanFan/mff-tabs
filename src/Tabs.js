@@ -21,7 +21,6 @@ export default class Tabs extends Component {
   constructor (props) {
     super(props)
     this.render = this.render.bind(this)
-    this.componentWillReceiveProps = this.componentWillReceiveProps.bind(this)
     this.onTabClick = this.onTabClick.bind(this)
     this.onNavKeyDown = this.onNavKeyDown.bind(this)
     this.setActiveKey = this.setActiveKey.bind(this)
@@ -109,40 +108,48 @@ export default class Tabs extends Component {
   }
 
   render () {
-    const props = this.props
     const {
+      className,
       prefixCls,
-      tabBarPosition, className,
-      renderTabContent,
       renderTabBar,
-    } = props
+      hasTabHeader,
+      tabBarPosition, 
+      renderTabContent,
+    } = this.props
+    , props = this.props
+
+
     const cls = classnames({
       [prefixCls]: 1,
-      [`${prefixCls}-${tabBarPosition}`]: 1,
       [className]: !!className,
+      [`${prefixCls}-${tabBarPosition}`]: 1,
     })
 
     this.tabBar = renderTabBar()
     const contents = [
-      React.cloneElement(this.tabBar, {
-        prefixCls,
-        key: 'tabBar',
-        onKeyDown: this.onNavKeyDown,
-        tabBarPosition,
-        onTabClick: this.onTabClick,
-        panels: props.children,
-        activeKey: this.state.activeKey,
-      }),
       React.cloneElement(renderTabContent(), {
         prefixCls,
         tabBarPosition,
-        activeKey: this.state.activeKey,
-        destroyInactiveTabPane: props.destroyInactiveTabPane,
+        key: 'tabContent',
         children: props.children,
         onChange: this.setActiveKey,
-        key: 'tabContent',
+        activeKey: this.state.activeKey,
+        destroyInactiveTabPane: props.destroyInactiveTabPane,
       }),
     ]
+
+    hasTabHeader && contents.unshift(
+      React.cloneElement(this.tabBar, {
+        prefixCls,
+        key: 'tabBar',
+        tabBarPosition,
+        panels: props.children,
+        onTabClick: this.onTabClick,
+        onKeyDown: this.onNavKeyDown,
+        activeKey: this.state.activeKey,
+      })
+    )
+
     if (tabBarPosition === 'bottom') {
       contents.reverse()
     }
@@ -158,25 +165,27 @@ export default class Tabs extends Component {
 }
 
 Tabs.propTypes = {
-  destroyInactiveTabPane: PropTypes.bool,
-  renderTabBar: PropTypes.func.isRequired,
-  renderTabContent: PropTypes.func.isRequired,
-  onChange: PropTypes.func,
+  style: PropTypes.object,
   children: PropTypes.any,
+  onChange: PropTypes.func,
   prefixCls: PropTypes.string,
   className: PropTypes.string,
-  tabBarPosition: PropTypes.string,
-  style: PropTypes.object,
   activeKey: PropTypes.string,
+  tabBarPosition: PropTypes.string,
   defaultActiveKey: PropTypes.string,
+  destroyInactiveTabPane: PropTypes.bool,
+
+  renderTabBar: PropTypes.func.isRequired,
+  renderTabContent: PropTypes.func.isRequired,
 }
 
 Tabs.defaultProps = {
-  prefixCls: 'rc-tabs',
-  destroyInactiveTabPane: false,
-  onChange: noop,
-  tabBarPosition: 'top',
   style: {},
+  onChange: noop,
+  hasTabHeader: true,
+  prefixCls: 'rc-tabs',
+  tabBarPosition: 'top',
+  destroyInactiveTabPane: false,
 }
 
 Tabs.TabPane = TabPane
