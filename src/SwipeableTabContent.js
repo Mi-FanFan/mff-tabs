@@ -135,7 +135,8 @@ class SwipeableTabContent extends Component {
       this.props.onChange(getActiveKey(this.props.children, finalIndex))
     }
   }
-
+  // hammer组件需要addEventListener所以要在TabContent外面包一层div这样就不是react组件去addEventListener
+  // 避免报错
   render () {
     const {tabBarPosition, hammerOptions, animated} = this.props
     let direction = {}
@@ -161,7 +162,9 @@ class SwipeableTabContent extends Component {
         {...direction}
         options={hammerOptions}
       >
-        <TabContent {...this.props}/>
+        <div>
+          <TabContent {...this.props}/>
+        </div>
       </Hammer>
     )
   }

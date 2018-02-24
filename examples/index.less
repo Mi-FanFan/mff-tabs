@@ -1,0 +1,560 @@
+// 支付宝钱包默认主题
+// https://github.com/ant-design/ant-design-mobile/wiki/设计变量表及命名规范
+@mi-prefix: mi;
+// 色彩
+// ---
+// 文字色
+@color-text-base: #000;                  // 基本
+@color-text-base-inverse: #fff;          // 基本 - 反色
+@color-text-secondary: #a4a9b0;          // 辅助色
+@color-text-placeholder: #bbb;           // 文本框提示
+@color-text-disabled: #bbb;              // 失效
+@color-text-caption: #888;               // 辅助描述
+@color-text-paragraph: #333;             // 段落
+@color-link: @brand-primary;             // 链接
+@color-blue: #108ee9;
+// 阴影色
+@color-shadow: rgba(0, 0, 0, .21);  // 阴影色
+
+// 背景色
+@fill-base: #fff;                           // 组件默认背景
+@fill-body: #f5f5f9;                        // 页面背景
+@fill-tap: #ddd;                            // 组件默认背景 - 按下
+@fill-disabled: #ddd;                       // 通用失效背景
+@fill-mask: rgba(0, 0, 0, .4);              // 遮罩背景
+@fill-overlay-inverse: rgba(58, 58, 58, .9);   // 浮层背景 - 反色，用于 toast
+
+// 透明度
+@opacity-disabled: 0.3;   // switch checkbox radio 等组件禁用的透明度
+
+// 全局/品牌色
+@brand-primary: #c21e25;
+@brand-primary-tap: #1284d6;
+@brand-success: #6abf47;
+@brand-warning: #f86e21;
+@brand-error: #f4333c;
+@brand-hot: #f96268;        // 用于推荐/促销/折扣
+@brand-important: #ff5b05;  // 用于小红点
+
+@circular-progress:#df676c;
+// 边框色
+@border-color-base: #ddd;
+@progress-back-color: #dbdbdb;
+
+// 字体尺寸
+// ---
+@font-size-icontext: 20px;
+@font-size-caption-sm: 24px;
+@font-size-base: 28px;
+@font-size-subhead: 30px;
+@font-size-caption: 32px;
+@font-size-heading: 34px;
+@font-size-display-sm: 36px;
+@font-size-display-md: 42px;
+@font-size-display-lg: 48px;
+@font-size-display-xl: 60px;
+
+// 字体家族
+// ---
+@font-family-base: -apple-system,PingFang SC,Helvetica Neue,Hiragino Sans GB,Helvetica,Microsoft YaHei,Arial,sans-serif;
+@font-family-code: Consolas,Menlo,Courier,monospace;
+
+// 圆角
+// ---
+@radius-xs: 4px;
+@radius-sm: 6px;
+@radius-md: 10px;
+@radius-lg: 14px;
+
+// 边框尺寸
+// ---
+@border-width-sm: 1PX;
+@border-width-md: 2px;
+@border-width-lg: 4px;
+
+// 间距
+// ---
+// 水平间距
+@h-spacing-sm: 10px;
+@h-spacing-md: 16px;
+@h-spacing-lg: 30px;
+
+// 垂直间距
+@v-spacing-xs: 6px;
+@v-spacing-sm: 12px;
+@v-spacing-md: 18px;
+@v-spacing-lg: 30px;
+@v-spacing-xl: 42px;
+
+// 高度
+// ---
+@option-height: 84px;           // action-sheet、popover 等组件的选项高度
+@line-height-base: 1;           // 单行行高
+@line-height-paragraph: 1.5;    // 多行行高
+// 图标尺寸
+// ---
+@icon-size-xxs: 30px;
+@icon-size-xs: 36px;
+@icon-size-sm: 42px;
+@icon-size-md: 44px;       // 导航条上的图标、grid的图标大小
+@icon-size-lg: 72px;
+
+// 动画缓动
+// ---
+
+// Animation
+@animation-duration-slow: .3s; // Modal
+@animation-duration-base: .2s;
+@animation-duration-fast: .1s; // Tooltip
+
+// Animation
+@ease-out            : cubic-bezier(0.215, 0.61, 0.355, 1);
+@ease-in             : cubic-bezier(0.55, 0.055, 0.675, 0.19);
+@ease-in-out         : cubic-bezier(0.645, 0.045, 0.355, 1);
+@ease-out-back       : cubic-bezier(0.12, 0.4, 0.29, 1.46);
+@ease-in-back        : cubic-bezier(0.71, -0.46, 0.88, 0.6);
+@ease-in-out-back    : cubic-bezier(0.71, -0.46, 0.29, 1.46);
+@ease-out-circ       : cubic-bezier(0.08, 0.82, 0.17, 1);
+@ease-in-circ        : cubic-bezier(0.6, 0.04, 0.98, 0.34);
+@ease-in-out-circ    : cubic-bezier(0.78, 0.14, 0.15, 0.86);
+@ease-out-quint      : cubic-bezier(0.23, 1, 0.32, 1);
+@ease-in-quint       : cubic-bezier(0.755, 0.05, 0.855, 0.06);
+@ease-in-out-quint   : cubic-bezier(0.86, 0, 0.07, 1);
+
+// 组件变量
+// ---
+
+// button
+@button-height: 84px;
+@button-font-size: 36px;
+
+@button-height-sm: 46px;
+@button-font-size-sm: 24px;
+
+@across-button-height: 100px;   // 通栏按钮高度
+
+@primary-button-fill: @brand-primary;
+@primary-button-fill-tap: @brand-primary-tap;
+
+@ghost-button-color: @brand-primary;    // 同时应用于背景、文字颜色、边框色
+@ghost-button-fill-tap: @brand-primary-tap;
+
+@link-button-fill-tap: #ddd;
+@link-button-font-size: 32px;
+
+// modal
+@modal-font-size-heading: 36px;
+
+// list
+@list-title-height: 60px;
+@list-item-height-sm: 70px;
+@list-item-height: 90px;
+@list-body-border-width: 1PX;
+@list-body-border-color: @border-color-base;
+
+// input
+@input-label-width: 34px;       // InputItem、TextareaItem 文字长度基础值
+@input-font-size: 28px;
+@input-color-icon: #ccc;
+@input-color-icon-tap: @brand-primary;
+@input-color-icon-inverse: rgba(255, 255, 255, .6);
+@input-color-icon-tap-inverse: rgba(255, 255, 255, .4);
+
+// tabs
+@tabs-color: #db3652;
+@tabs-height: 87px;
+@tabs-font-size-heading: 30px;
+@tabs-ink-bar-height: 4px;
+
+// segmented-control
+@segmented-control-color: @brand-primary;  // 同时应用于背景、文字颜色、边框色
+@segmented-control-height: 54px;
+@segmented-control-fill-tap: fade(@brand-primary, 0.1);
+
+// tab-bar
+@tab-bar-fill: #ebeeef;
+@tab-bar-height: 100px;
+
+// search-bar
+@search-bar-fill: #efeff4;
+@search-bar-input-height: 56px;
+
+// notice-bar
+@notice-bar-fill: #fefcec;
+@notice-bar-height: 72px;
+@notice-color: #f76a24;
+
+// switch
+@switch-fill: #4dd865;
+
+// tag
+@tag-height: 48px;
+@tag-height-sm: 28px;
+@tag-color: @brand-primary;
+
+// table
+@table-title-height: 60px;
+
+// z-index
+@progressZIndex: 2000;
+@popoverZIndex: 1999;
+@toastZIndex: 1999;
+@actionSheetZIndex: 1000; // actonsheet 会放到 popup / modal 中
+@datePickerZIndex: 1000;  // picker 会放到 popup / modal 中
+@pickerZIndex: 1000;
+@popupZIndex: 999;
+@modalZIndex: 999; // modal.alert 应该最大，其他应该较小
+@zindex-viewer: 1070;
+@zindex-viewer-view: 10070;
+
+@maskZIndex: 666;
+
+
+
+.transform(@t) {
+  transform: @t;
+}
+.transform-origin(@to) {
+  transform-origin: @to;
+}
+
+.hairline-top(@color:@border-color-base, @width: @border-width-sm) {
+  border-top: @width solid @color;
+}
+.hairline-bottom(@color:@border-color-base, @left:0, @width: @border-width-sm) {
+  // 注意：如果元素的 overflow 有 scroll 出现，其伪元素 绝对定位 显示将出错，例如 bottom: 0
+  &:after {
+    display: block;
+    position: absolute;
+    content: '';
+    left: @left;
+    bottom: 0;
+    right: auto;
+    top: auto;
+    width: 100%;
+    border-bottom: @width solid @color;
+  }
+}
+.hairline-right(@color:@border-color-base) {
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: auto;
+    bottom: auto;
+    width: @border-width-sm;
+    height: 100%;
+    background-color: @color;
+    display: block;
+  }
+}
+// For right and bottom
+.hairline-remove-right-bottom {
+  border-bottom: 0;
+  &:after {
+    display: none;
+  }
+}
+.hairline-remove-right-bottom-bak {
+  &:after {
+    display: none;
+  }
+}
+// For left and top
+.hairline-remove-left-top {
+  &:before {
+    display: none;
+  }
+}
+
+@svg-bg-img: '';
+.encoded-svg-background(@svg) when (@svg = 'image_picker_delete') {
+  @svg-bg-img: "<svg width='16' height='16' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg'><g id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'><circle id='Oval-98' fill-opacity='0.4' fill='#404040' cx='8' cy='8' r='8'></circle><path d='M11.8979743,11.8990375 L11.8979743,11.8990375 C11.7633757,12.0336542 11.5447877,12.0336542 11.4101891,11.8990375 L8,8.48838931 L4.5887341,11.8990375 C4.45413554,12.0336542 4.23554748,12.0336542 4.10094892,11.8990375 L4.10094892,11.8990375 C3.96635036,11.7644208 3.96635036,11.5458033 4.10094892,11.4111866 L7.51221482,8.00053847 L4.10202571,4.58881335 C3.96742715,4.45419667 3.96742715,4.23557919 4.10202571,4.10096251 L4.10202571,4.10096251 C4.23662427,3.96634583 4.45521233,3.96634583 4.58981089,4.10096251 L8,7.51268762 L11.4112659,4.10203944 C11.5458645,3.96742276 11.7644525,3.96742276 11.8990511,4.10203944 L11.8990511,4.10203944 C12.0336496,4.23665612 12.0336496,4.45527361 11.8990511,4.58989029 L8.48778518,8.00053847 L11.8979743,11.4122636 C12.0325729,11.5468803 12.0325729,11.7644208 11.8979743,11.8990375 L11.8979743,11.8990375 Z' id='Shape' fill='#FFFFFF' transform='translate(8.000000, 8.000000) scale(1, -1) translate(-8.000000, -8.000000) '></path></g></svg>";
+  .encoded-svg-background-i(@svg-bg-img);
+}
+.encoded-svg-background(@svg) when (@svg = 'input_item_delete') {
+  @svg-bg-img: "<svg fill='#fff' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/><path d='M0 0h24v24H0z' fill='none'/></svg>";
+  .encoded-svg-background-i(@svg-bg-img);
+}
+.encoded-svg-background(@svg) when (@svg = 'modal_delete') {
+  @svg-bg-img: "<svg width='30px' height='30px' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'> <defs></defs> <g id='ALL-ICON' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'> <g id='Rectangle-283-+-Rectangle-283' fill='#888888'> <rect id='Rectangle-283' transform='translate(14.849242, 14.849242) rotate(-315.000000) translate(-14.849242, -14.849242) ' x='-5.1507576' y='13.8492424' width='40' height='2'></rect> <rect id='Rectangle-283' transform='translate(14.849242, 14.849242) scale(-1, 1) rotate(-315.000000) translate(-14.849242, -14.849242) ' x='-5.1507576' y='13.8492424' width='40' height='2'></rect> </g> </g> </svg>";
+  .encoded-svg-background-i(@svg-bg-img);
+}
+.encoded-svg-background(@svg) when (@svg = 'textarea_item_delete') {
+  @svg-bg-img: "<svg fill='#fff' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/><path d='M0 0h24v24H0z' fill='none'/></svg>";
+  .encoded-svg-background-i(@svg-bg-img);
+}
+.encoded-svg-background(@svg) when (@svg = 'right') {
+  @svg-bg-img: '<svg width="16px" height="26px" viewBox="0 0 16 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="UI-KIT_基础元件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="9.9基础元件" transform="translate(-5809.000000, -8482.000000)" fill="#C7C7CC"><polygon id="Disclosure-Indicator" points="5811 8482 5809 8484 5820.5 8495 5809 8506 5811 8508 5825 8495"></polygon></g></g></svg>';
+  .encoded-svg-background-i(@svg-bg-img);
+}
+.encoded-svg-background(@svg) when (@svg = 'error') {
+  @svg-bg-img: "<svg width='18' height='18' viewBox='0 0 18 18' xmlns='http://www.w3.org/2000/svg'><g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'><g transform='translate(-300.000000, -1207.000000)' fill='#FF5500'><g id='exclamation-circle-o' transform='translate(300.000000, 1207.000000)'><path d='M9,16.734375 C10.0441406,16.734375 11.0566406,16.5304688 12.009375,16.1279297 C12.9304688,15.7376953 13.7566406,15.1804687 14.4685547,14.4703125 C15.1787109,13.7601563 15.7376953,12.9322266 16.1261719,12.0111328 C16.5304688,11.0566406 16.734375,10.0441406 16.734375,9 C16.734375,7.95585938 16.5304688,6.94335938 16.1279297,5.990625 C15.7376953,5.06953125 15.1804687,4.24335938 14.4703125,3.53144531 C13.7601563,2.82128906 12.9322266,2.26230469 12.0111328,1.87382813 C11.0566406,1.46953125 10.0441406,1.265625 9,1.265625 C7.95585938,1.265625 6.94335938,1.46953125 5.990625,1.87207031 C5.06953125,2.26230469 4.24335938,2.81953125 3.53144531,3.5296875 C2.82128906,4.23984375 2.26230469,5.06777344 1.87382813,5.98886719 C1.46953125,6.94335938 1.265625,7.95585938 1.265625,9 C1.265625,10.0441406 1.46953125,11.0566406 1.87207031,12.009375 C2.26230469,12.9304688 2.81953125,13.7566406 3.5296875,14.4685547 C4.23984375,15.1787109 5.06777344,15.7376953 5.98886719,16.1261719 C6.94335938,16.5304688 7.95585938,16.734375 9,16.734375 L9,16.734375 Z M9,18 C4.02890625,18 0,13.9710937 0,9 C0,4.02890625 4.02890625,0 9,0 C13.9710937,0 18,4.02890625 18,9 C18,13.9710937 13.9710937,18 9,18 L9,18 L9,18 Z M9,6.75 C8.61152344,6.75 8.296875,7.06464844 8.296875,7.453125 L8.296875,13.9394531 C8.296875,14.3279297 8.61152344,14.6425781 9,14.6425781 C9.38847656,14.6425781 9.703125,14.3279297 9.703125,13.9394531 L9.703125,7.453125 C9.703125,7.06464844 9.38847656,6.75 9,6.75 L9,6.75 Z M8.20898438,4.83398438 C8.20898438,5.27085024 8.56313413,5.625 9,5.625 C9.43686587,5.625 9.79101562,5.27085024 9.79101562,4.83398438 C9.79101562,4.39711851 9.43686587,4.04296875 9,4.04296875 C8.56313413,4.04296875 8.20898438,4.39711851 8.20898438,4.83398438 L8.20898438,4.83398438 Z' id='Shape' transform='translate(9.000000, 9.000000) scale(1, -1) translate(-9.000000, -9.000000) '></path></g></g></g></svg>";
+  .encoded-svg-background-i(@svg-bg-img);
+}
+.encoded-svg-background(@svg) when (@svg = 'loading') {
+  @svg-bg-img: '<svg xmlns="http://www.w3.org/2000/svg" width="59.75" height="60.25" viewBox="0 -2 59.75 60.25"><path fill="#cccccc" d="M29.691-.527c-15.648 0-28.333 12.685-28.333 28.333s12.685 28.333 28.333 28.333c15.648 0 28.333-12.685 28.333-28.333S45.339-.527 29.691-.527zm.184 53.75c-14.037 0-25.417-11.379-25.417-25.417S15.838 2.39 29.875 2.39s25.417 11.379 25.417 25.417-11.38 25.416-25.417 25.416z"/><path fill="none" stroke="@{brand-primary}" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M56.587 29.766c.369-7.438-1.658-14.699-6.393-19.552"/></svg>';
+  .encoded-svg-background-i(@svg-bg-img);
+}
+.encoded-svg-background(@svg) when (@svg = 'search_bar_search') {
+  @svg-bg-img: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14' enable-background='new 0 0 14 14'><g><path fill='@{input-color-icon}' d='M5,1c2.2,0,4,1.8,4,4S7.2,9,5,9S1,7.2,1,5S2.8,1,5,1 M5,0C2.2,0,0,2.2,0,5s2.2,5,5,5s5-2.2,5-5S7.8,0,5,0 L5,0z'/></g><line stroke='@{input-color-icon}' stroke-miterlimit='10' x1='12.6' y1='12.6' x2='8.2' y2='8.2'/></svg>";
+  .encoded-svg-background-i(@svg-bg-img);
+}
+.encoded-svg-background(@svg) when (@svg = 'search_bar_clear') {
+  @svg-bg-img: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'><circle cx='14' cy='14' r='14' fill='@{input-color-icon}'/><line stroke='#ffffff' stroke-width='2' stroke-miterlimit='10' x1='8' y1='8' x2='20' y2='20'/><line fill='none' stroke='#ffffff' stroke-width='2' stroke-miterlimit='10' x1='20' y1='8' x2='8' y2='20'/></svg>";
+  .encoded-svg-background-i(@svg-bg-img);
+}
+.encoded-svg-background(@svg) when (@svg = 'search_bar_clear_active') {
+  @svg-bg-img: "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'><circle cx='14' cy='14' r='14' fill='@{input-color-icon-tap}'/><line stroke='#ffffff' stroke-width='2' stroke-miterlimit='10' x1='8' y1='8' x2='20' y2='20'/><line fill='none' stroke='#ffffff' stroke-width='2' stroke-miterlimit='10' x1='20' y1='8' x2='8' y2='20'/></svg>";
+  .encoded-svg-background-i(@svg-bg-img);
+}
+// Encoded SVG Background
+.encoded-svg-background-i(@svg) {
+  @url: `encodeURIComponent(@{svg})`;
+  background-image: url("data:image/svg+xml;charset=utf-8,@{url}");
+}
+
+
+.align-self(@as) {
+  align-self: @as;
+}
+
+.ellipsis() {
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.display-box() {
+  display: flex;
+}
+
+.flex-direction(@direction: row) {
+  flex-direction: @direction;
+}
+
+.flex-wrap(@wrap: nowrap) {
+  flex-wrap: @wrap;
+}
+
+.flex-justify(@justify: flex-start) {
+  justify-content: @justify;
+}
+
+.box-align(@align: center) {
+  align-items: @align;
+}
+
+.box-align-content(@alignContent: stretch) {
+  align-content: @alignContent;
+}
+
+.box-flex(@scale: 1) {
+  flex: @scale;
+}
+
+.border-radius(@radius: 0) {
+  border-top-left-radius: @radius;
+  border-top-right-radius: @radius;
+  border-bottom-left-radius: @radius;
+  border-bottom-right-radius: @radius;
+  -webkit-background-clip: padding-box;
+}
+
+.background(@start: #ffffff, @end: #000000) {
+  background: @end;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@start), to(@end)); /* Saf4+, Chrome */
+  background-image: linear-gradient(@start, @end);
+}
+
+.border-1px-bottom(@color: #d2d2d2) {
+  background: left bottom repeat-x;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(.5, transparent), color-stop(.5, @color), to(@color));
+  background-image: linear-gradient(left top, left bottom, color-stop(.5, transparent), color-stop(.5, @color), to(@color));
+  -webkit-background-size: 100% @border-width-sm;
+  background-size: 100% @border-width-sm;
+}
+
+.border-1px-top(@color: #d2d2d2) {
+  background: left top repeat-x;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@color), color-stop(.5, @color), color-stop(.5, transparent));
+  background-image: linear-gradient(left top, left bottom, from(@color), color-stop(.5, @color), color-stop(.5, transparent));
+  -webkit-background-size: 100% @border-width-sm;
+  background-size: 100% @border-width-sm;
+}
+
+.border-1px-both(@color: #d2d2d2) {
+  background-position: left top, left bottom;
+  background-repeat: repeat-x, repeat-x;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@color), color-stop(.5, @color), color-stop(.5, transparent)), -webkit-gradient(linear, left top, left bottom, color-stop(.5, transparent), color-stop(.5, @color), to(@color));
+  background-image: linear-gradient(left top, left bottom, from(@color), color-stop(.5, @color), color-stop(.5, transparent)), linear-gradient(left top, left bottom, color-stop(.5, transparent), color-stop(.5, @color), to(@color));
+  -webkit-background-size: 100% @border-width-sm, 100% @border-width-sm;
+  background-size: 100% @border-width-sm, 100% @border-width-sm;
+}
+
+.border-1px-scale(@color: #d2d2d2) {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: -@border-width-sm;
+    left: 0px;
+    right: 0px;
+    border-bottom: @border-width-sm solid @color;
+    -webkit-transform: scaleY(.5);
+    -webkit-transform-origin: 0px 0px;
+  }
+}
+
+.box-sizing(@sizing: border-box) {
+  -webkit-box-sizing: @sizing;
+}
+
+.float-clear() {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0px;
+    content: ' ';
+    clear: both;
+    height: 0px;
+  }
+}
+
+
+
+@tabs-prefix-cls: mi-tabs;
+@page-hide-color: rgba(255, 255, 255, 0);
+@page-show-color: rgba(255, 255, 255, 1);
+
+.@{tabs-prefix-cls} {
+  overflow: hidden;
+
+  &-bar {
+    display: flex;
+    position: relative;
+
+    .@{tabs-prefix-cls}-prevpage:before {
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 118px;
+      height: 100%;
+      content: ' ';
+      z-index: 1000;
+      background: #FFF;
+      background: -moz-linear-gradient(left, @page-show-color, @page-hide-color);
+      background: -webkit-gradient(linear,0% 0%, 100% 0%, from(@page-show-color), to(@page-hide-color));
+      background: -o-linear-gradient(left, @page-show-color, @page-hide-color);
+    }
+
+    .@{tabs-prefix-cls}-nextpage:after {
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 118px;
+      height: 100%;
+      content: ' ';
+      z-index: 1000;
+      background: #FFF;
+      background: -moz-linear-gradient(left, @page-hide-color, @page-show-color);
+      background: -webkit-gradient(linear,0% 0%, 100% 0%, from(@page-hide-color), to(@page-show-color));
+      background: -o-linear-gradient(left,  @page-hide-color, @page-show-color);
+    }
+
+    .@{tabs-prefix-cls}-nav-swipe-container {
+      width: 100%;
+      .@{tabs-prefix-cls}-nav-swipe {
+        position: relative;
+        left: 0;
+
+        .@{tabs-prefix-cls}-nav {
+          width: 100%;
+          display: flex;
+          flex: 1;
+
+          .@{tabs-prefix-cls}-tab {
+            justify-content: center;
+            flex: 0 0 20%;
+          }
+        }
+      }
+    }
+
+
+    .@{tabs-prefix-cls}-tab {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      border-bottom: @border-width-sm solid @border-color-base;
+      font-size: @tabs-font-size-heading;
+      height: @tabs-height;
+      line-height: @tabs-height;
+      color: @color-text-base;
+      background-color: @fill-base;
+      box-sizing: border-box;
+      &-active {
+        color: @tabs-color;
+      }
+    }
+  }
+
+  &-ink-bar {
+    position: absolute;
+    bottom: 0;
+    height: @tabs-ink-bar-height;
+    background-color: @tabs-color;
+
+    &-animated {
+      transition: transform .3s @ease-in-out-quint;
+    }
+  }
+
+  &&-bottom {
+    .@{tabs-prefix-cls}-ink-bar {
+      bottom: auto;
+      top: 0;
+    }
+    .@{tabs-prefix-cls}-tab {
+      border-top: @border-width-sm solid @border-color-base;
+      border-bottom: 0;
+    }
+  }
+
+  &-content {
+    zoom: 1;
+
+    .@{tabs-prefix-cls}-tabpane {
+      overflow: auto;
+    }
+
+    &-animated {
+      transition: transform .3s @ease-in-out-quint;
+      display: flex;
+      will-change: transform;
+
+      .@{tabs-prefix-cls}-tabpane {
+        box-sizing: border-box;
+        width: 100%;
+        flex-shrink: 0;
+      }
+    }
+
+    &-no-animated {
+      .@{tabs-prefix-cls}-tabpane-inactive {
+        display: none;
+      }
+    }
+  }
+
+  .@{tabs-prefix-cls}-tabpane-inactive {
+    height: 0;
+    overflow: visible;
+  }
+}
